@@ -1,1 +1,11 @@
-westagram SignIn, Signup TEST
+# <구현 사항>
+
+## 1. 인스타그램 회원가입 페이지 클론
+- 비밀번호 및 이메일 형식 정규식 사용
+- bcrypt를 이용하여 비밀번호 hashing 후 DB에 저장
+## 2. 인스타그램 로그인 페이지 클론
+- 로그인 성공 시 token 발행
+- decorator를 활용하여 특정 활동 및 창 이동시, token 확인
+## 3. 게시물 등록
+- Image, Title, Contents 등록 가능
+## 4. 본인이 등록한 게시물 GET 가능
