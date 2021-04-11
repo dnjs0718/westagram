@@ -29,7 +29,6 @@ class FeedView(View):
     #    except KeyError:
    #         return JsonResponse({'message': 'Keyerror occured!'}, status = 400
 
-class PostView(View):
     @login_check
     def get(self, request):
         user = request.user
@@ -38,7 +37,6 @@ class PostView(View):
         for i in feeds:
             feeds_list.append(
                 {
-                #'user_name' : request.user.username,
                 'username'  : User.objects.get(id=i.username_id).username,
                 'image_url' : i.img,
                 'content'   : i.contents,
@@ -47,5 +45,7 @@ class PostView(View):
                     ) 
             return JsonResponse({'feeds': feeds_list}, status=200)
             
+    
+    
 
             
